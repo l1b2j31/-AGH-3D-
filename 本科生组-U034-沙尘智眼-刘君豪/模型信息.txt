@@ -1,0 +1,3 @@
+模型：agnes-3.0-flash（Sapiens AI 开发）
+• Harness：Agnes Harness 0.0.0，平台 win32-x64
+• 调用方式：Node 服务驱动 12 步决策引擎，Python requests 调 HTTP 验证
