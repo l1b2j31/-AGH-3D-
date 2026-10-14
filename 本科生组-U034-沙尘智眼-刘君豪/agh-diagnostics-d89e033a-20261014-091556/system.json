@@ -1,0 +1,75 @@
+{
+  "agh": {
+    "version": "0.0.0"
+  },
+  "runtime": {
+    "platform": "win32",
+    "arch": "x64",
+    "osRelease": "10.0.26200",
+    "node": "24.21.0",
+    "pid": 51520,
+    "uptimeMs": 87257008
+  },
+  "profile": {
+    "name": "local-dev",
+    "resolvedProfileHash": "sha256-0291b07b2458a87603a812ffb7a2616528d9e45c70bbe42595ef73513f650425",
+    "presets": {
+      "default": "standard-windows",
+      "allowed": [
+        "standard-windows"
+      ]
+    },
+    "models": [
+      {
+        "route": "account-acct-895778db-5b92-4593-b2a6-73b73818fe30",
+        "id": "agnes-3.0-flash",
+        "reasoning": false
+      }
+    ]
+  },
+  "config": {
+    "profile": "local-dev",
+    "revision": 1,
+    "configured": true,
+    "accounts": [
+      {
+        "accountId": "acct-895778db-5b92-4593-b2a6-73b73818fe30",
+        "label": "agnes",
+        "providerId": "agnes-ai",
+        "route": "account-acct-895778db-5b92-4593-b2a6-73b73818fe30",
+        "baseUrl": "https://api.agnes-ai.cn/v1",
+        "model": "agnes-3.0-flash",
+        "models": [
+          {
+            "id": "agnes-3.0-flash",
+            "name": "Agnes 3.0 Flash"
+          }
+        ],
+        "enabled": true,
+        "authType": "api-key",
+        "credentialConfigured": true
+      }
+    ],
+    "defaultAccountId": "acct-895778db-5b92-4593-b2a6-73b73818fe30",
+    "effect": "new-sessions",
+    "provider": {
+      "id": "agnes-ai",
+      "route": "account-acct-895778db-5b92-4593-b2a6-73b73818fe30",
+      "baseUrl": "https://api.agnes-ai.cn/v1",
+      "model": "agnes-3.0-flash",
+      "credentialConfigured": true
+    }
+  },
+  "browser": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "language": "zh-CN",
+    "platform": "Win32",
+    "timeZone": "Asia/Shanghai",
+    "screen": {
+      "width": 1707,
+      "height": 1067,
+      "dpr": 1.5
+    },
+    "origin": "http://127.0.0.1:4180"
+  }
+}
