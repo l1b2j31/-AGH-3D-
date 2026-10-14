@@ -1,0 +1,30 @@
+{"observation":"visibility=383m, wind=9.6m/s, level=2","decision":"读取气象站状态","tool":"get_weather_station_status","result":"accepted","next":"读取车辆状态","timestamp":"2026-10-14T11:49:35.554Z","seq":1}
+{"observation":"stuck=true, status=stuck, fuel=32%","decision":"车辆被困，尝试自救","tool":"get_vehicle_status","result":"accepted","next":"停止车辆","timestamp":"2026-10-14T11:49:35.565Z","seq":2}
+{"observation":"stuck=true, visibility=383m≥150m","decision":"允许自救","tool":"attempt_self_recovery","result":"accepted","next":"等待自救结果","timestamp":"2026-10-14T11:49:35.570Z","seq":3}
+{"observation":"vehicle.status=stuck","decision":"停止车辆","tool":"stop_vehicle","result":"accepted","next":"判断无人机是否允许起飞","timestamp":"2026-10-14T11:49:35.577Z","seq":4}
+{"observation":"drone.battery=76%, status=standby","decision":"读取无人机状态","tool":"get_drone_status","result":"accepted","next":"判断是否允许起飞","timestamp":"2026-10-14T11:49:35.589Z","seq":5}
+{"observation":"wind=9.6m/s≤12, visibility=383m≥150, battery=76%≥20","decision":"允许无人机侦察","tool":"dispatch_drone","result":"accepted","next":"读取无人机摄像头","timestamp":"2026-10-14T11:49:35.593Z","seq":6}
+{"observation":"drone-cam-01: image/png","decision":"读取无人机摄像头","tool":"get_camera_frame(drone-cam-01)","result":"accepted","next":"确认备用路线","timestamp":"2026-10-14T11:49:35.598Z","seq":7}
+{"observation":"route.known=undefined, traversable=undefined","decision":"路线尚未确认","tool":"get_route_status","result":"pending","next":"设置补光灯","timestamp":"2026-10-14T11:49:35.601Z","seq":8}
+{"observation":"visibility=383m, light needs to be on","decision":"打开补光灯（亮度80）","tool":"turn_light_on(light-01, 80)","result":"accepted","next":"设置诱导屏","timestamp":"2026-10-14T11:49:35.604Z","seq":9}
+{"observation":"vms message=\"set\", limit=30","decision":"诱导屏显示\"前方救援，限速 30\"","tool":"set_message + set_speed_limit","result":"accepted","next":"派遣救援车","timestamp":"2026-10-14T11:49:35.608Z","seq":10}
+{"observation":"route.traversable=undefined, visibility=383m","decision":"派遣救援车","tool":"dispatch_rescue_vehicle","result":"rejected: 需先侦察并确认备用路线可通行","next":"读取救援车摄像头","timestamp":"2026-10-14T11:49:35.610Z","seq":11}
+{"observation":"rescue-cam-01: image/png","decision":"读取救援车摄像头","tool":"get_camera_frame(rescue-cam-01)","result":"accepted","next":"完成牵引","timestamp":"2026-10-14T11:49:35.613Z","seq":12}
+{"observation":"牵引未完成","decision":"牵引未确认","tool":"towing_check","result":"pending","next":"完成牵引","timestamp":"2026-10-14T11:50:05.950Z","seq":13}
+{"observation":"visibility=383m, wind=9.6m/s, level=2","decision":"读取气象站状态","tool":"get_weather_station_status","result":"accepted","next":"读取车辆状态","timestamp":"2026-10-14T11:50:25.539Z","seq":1}
+{"observation":"stuck=true, status=stuck, fuel=32%","decision":"车辆被困，尝试自救","tool":"get_vehicle_status","result":"accepted","next":"停止车辆","timestamp":"2026-10-14T11:50:25.545Z","seq":2}
+{"observation":"stuck=true, visibility=383m≥150m","decision":"允许自救","tool":"attempt_self_recovery","result":"accepted","next":"等待自救结果","timestamp":"2026-10-14T11:50:25.549Z","seq":3}
+{"observation":"vehicle.status=stuck","decision":"停止车辆","tool":"stop_vehicle","result":"accepted","next":"判断无人机是否允许起飞","timestamp":"2026-10-14T11:50:25.552Z","seq":4}
+{"observation":"drone.battery=76%, status=standby","decision":"读取无人机状态","tool":"get_drone_status","result":"accepted","next":"判断是否允许起飞","timestamp":"2026-10-14T11:50:25.554Z","seq":5}
+{"observation":"wind=9.6m/s≤12, visibility=383m≥150, battery=76%≥20","decision":"允许无人机侦察","tool":"dispatch_drone","result":"accepted","next":"读取无人机摄像头","timestamp":"2026-10-14T11:50:25.558Z","seq":6}
+{"observation":"drone-cam-01: image/png","decision":"读取无人机摄像头","tool":"get_camera_frame(drone-cam-01)","result":"accepted","next":"确认备用路线","timestamp":"2026-10-14T11:50:25.561Z","seq":7}
+{"observation":"route.known=undefined, traversable=undefined","decision":"路线尚未确认","tool":"get_route_status","result":"pending","next":"设置补光灯","timestamp":"2026-10-14T11:51:06.013Z","seq":8}
+{"observation":"visibility=383m, light needs to be on","decision":"打开补光灯（亮度80）","tool":"turn_light_on(light-01, 80)","result":"accepted","next":"设置诱导屏","timestamp":"2026-10-14T11:51:06.020Z","seq":9}
+{"observation":"vms message=\"set\", limit=30","decision":"诱导屏显示\"前方救援，限速 30\"","tool":"set_message + set_speed_limit","result":"accepted","next":"派遣救援车","timestamp":"2026-10-14T11:51:06.031Z","seq":10}
+{"observation":"route.traversable=undefined, visibility=383m","decision":"派遣救援车","tool":"dispatch_rescue_vehicle","result":"accepted","next":"读取救援车摄像头","timestamp":"2026-10-14T11:51:06.035Z","seq":11}
+{"observation":"rescue-cam-01: image/png","decision":"读取救援车摄像头","tool":"get_camera_frame(rescue-cam-01)","result":"accepted","next":"完成牵引","timestamp":"2026-10-14T11:51:06.039Z","seq":12}
+{"observation":"牵引未完成","decision":"牵引未确认","tool":"towing_check","result":"pending","next":"完成牵引","timestamp":"2026-10-14T11:51:36.385Z","seq":13}
+{"observation":"wind=16.8m/s>12m/s, visibility=56m<150m","decision":"风速过高，无人机不能起飞，等待天气改善","tool":"dispatch_drone","result":"rejected: 仿真安全约束：风速>12m/s或能见度<150米，禁止起飞","next":"等待风速降至12m/s以下","scenario":"wind_too_high","timestamp":"2026-10-14T11:53:02.256Z","model":"agnes-3.0-flash"}
+{"observation":"visibility=91m<150m, light.on=false","decision":"能见度过低，打开补光灯（亮度100）","tool":"turn_light_on(light-01, 100)","result":"accepted","next":"救援车出发时保持灯亮","scenario":"low_visibility_light","timestamp":"2026-10-14T11:53:04.503Z","model":"agnes-3.0-flash"}
+{"observation":"route.known=true, traversable=true, vms.message=\"前方救援，限速 30\"","decision":"救援车出发，诱导屏显示\"前方救援，限速 30\"","tool":"set_message + set_speed_limit + dispatch_rescue_vehicle","result":"accepted","next":"读取救援车摄像头","scenario":"rescue_dispatch_vms","timestamp":"2026-10-14T11:53:20.796Z","model":"agnes-3.0-flash"}
+{"observation":"route.known=false, traversable=false, vms=\"前方封闭，请绕行\"","decision":"路线不可通行，诱导屏显示\"前方封闭，请绕行\"","tool":"set_message + set_speed_limit(vms-01)","result":"accepted","next":"等待路线恢复或选择替代方案","scenario":"route_blocked_vms","timestamp":"2026-10-14T11:53:21.919Z","model":"agnes-3.0-flash"}
