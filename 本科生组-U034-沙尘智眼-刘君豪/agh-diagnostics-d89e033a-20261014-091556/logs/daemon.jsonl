@@ -1,9 +1,0 @@
-{"at":"2026-10-10T13:59:12.624Z","kind":"daemon.request_failed","detail":{"diagnosticId":"5f476f2a-c12e-4405-8af3-c2be83a1b838","method":"session/prompt","errorCode":"UNKNOWN"}}
-{"at":"2026-10-10T14:42:08.211Z","kind":"daemon.request_failed","detail":{"diagnosticId":"29bc9700-4837-48cb-96ee-4a5348ae6bf9","method":"session/prompt","errorCode":"UNKNOWN"}}
-{"at":"2026-10-10T14:45:23.308Z","kind":"daemon.request_failed","detail":{"diagnosticId":"41906d2a-06cb-451f-9a70-a75c0c8ce1ec","method":"session/prompt","errorCode":"UNKNOWN"}}
-{"at":"2026-10-10T14:50:06.436Z","kind":"daemon.request_failed","detail":{"diagnosticId":"cdb1e466-d467-41ff-84e9-7bec38e2a70a","method":"session/prompt","errorCode":"UNKNOWN"}}
-{"at":"2026-10-12T12:38:10.585Z","kind":"daemon.request_failed","detail":{"diagnosticId":"fb80b992-81ff-4530-b6d3-df2f2a0bc246","method":"_agnes/v1/submit","errorCode":"UNKNOWN"}}
-{"at":"2026-10-12T12:48:22.450Z","kind":"daemon.request_failed","detail":{"diagnosticId":"5d21fdbd-d419-4e04-ba0a-76888d43bde3","method":"_agnes/v1/submit","errorCode":"UNKNOWN"}}
-{"at":"2026-10-12T12:48:28.301Z","kind":"daemon.request_failed","detail":{"diagnosticId":"cbadfdf9-583a-4d43-a03e-aad569429167","method":"_agnes/v1/submit","errorCode":"UNKNOWN"}}
-{"at":"2026-10-12T12:48:45.665Z","kind":"daemon.request_failed","detail":{"diagnosticId":"d6c5518e-bd4d-4743-82c7-9f16fe24f569","method":"_agnes/v1/submit","errorCode":"UNKNOWN"}}
-{"at":"2026-10-12T13:05:25.229Z","kind":"daemon.request_failed","detail":{"diagnosticId":"0a996b15-1ce4-4f38-8615-45e2c4134436","method":"_agnes/v1/submit","errorCode":"UNKNOWN"}}
